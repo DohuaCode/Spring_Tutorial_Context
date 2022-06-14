@@ -122,3 +122,22 @@ this. var = var;
 Аннотации **@PostConstruct** и **@Predestroy** задают *INIT* и *DESTROY* методы
 
 
+3. **Конфигурация с помощью Java класса**
+
+Пример класса
+[ПРИМЕР КОНИФГ-КЛАССА](https://github.com/DohuaCode/Spring_Tutorial/blob/main/src/main/java/org/dohuacode/spring/configuration/Jcode/Config.java "ПРИМЕР КОНИФГ-КЛАССА")
+
+Создание контейнера:
+
+```
+AnnotationConfigApplicationContext jcodecontext = new AnnotationConfigApplicationContext (Config.class);
+```
+**Способ без сканирования аннотаций**
+
+[ПРИМЕР КОНФИГ-КЛАССА](https://github.com/DohuaCode/Spring_Tutorial/blob/main/src/main/java/org/dohuacode/spring/configuration/Jcode2/Config.java "ПРИМЕР КОНФИГ-КЛАССА")
+
+Аннтоция **@Bean** внутри класса конфигурации указывает на метод зоздания бина
+
+Аннотация `@PropertySource ("classpath:propertyfile")` задает путь к  проперти файлу файлу для задания значений переменным через **@Value**
+
+
