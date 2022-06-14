@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 public class PersonAutowired {
     @Autowired  // DEPENDENCY WITH FIELD SET
     @Qualifier("rabbitBean") // set bean foe dependency if many classes
+    // @Scope("singleton"/"prorotype")
     private Pet pet;
     //@Value("kozlov") //set value HARDCODED
     @Value("${person.name}")
