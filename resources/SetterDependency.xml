@@ -16,7 +16,7 @@
     <bean id = "person"
           class  = "org.dohuacode.spring.configuration.xmlconfig.PersonSetter">
         <property name = "pet" ref = "pet"/>
-        <!--set field value via setter-->
+        <!--set field value via getter-->
         <property name="name" value="debilov"/>
 
     </bean>
