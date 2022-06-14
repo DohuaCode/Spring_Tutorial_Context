@@ -81,3 +81,41 @@ var.sound();
           init-method="init"
           destroy-method="destroy">
 ```
+
+2.  **Конфигурация с помощью аннотаций**
+
+Для создания бинов проводится поиск классов , помеченных аннтотацией **@Component**
+
+Чтобы указать путь для поиска добвляем в XML  строку:
+
+```
+<context:component-scan base-package="package name where entities situated"/>
+```
+
+**Пример класса c аннтациями**
+
+[ПРИМЕР КЛАССА С АННОТАЦИЯМИ](https://github.com/DohuaCode/Spring_Tutorial/blob/main/src/main/java/org/dohuacode/spring/configuration/annotationCFG/PersonAutowired.java "ПРИМЕР КЛАССА С АННТАЦИЯМИ")
+
+**Зависимости создаются с помощью аннотации **@Autowired**
+ она может быть применена для:*
+- конструктора
+- сеттера
+- поля класса
+
+Аннтоция **@Qualifier** указывает какой класс будет использоваться для создания зависимости если в каталоге поиска есть больше одного подходящего
+бина.
+
+При использовании **@Qualifier **с конструктором аннотация записывается перед параметром конструктора
+
+```
+public constructor(@Qualifier("beanID") Class var){
+this. var = var;
+}
+```
+Аннотация **@Value** может задавать значения для переменных класса, значение задается либо через аннтоцию либо через файл properties, для этого надо указать путь к фалу в XML конфиге
+`<context:property-placeholder location="classpath:app.properties"/>`
+
+**Аннотация @Scope задает singleton\prototype значение**
+Аннотации **@PostConstruct** и **@Predestroy** задают* INIT* и *DESTROY* методы
+
+
