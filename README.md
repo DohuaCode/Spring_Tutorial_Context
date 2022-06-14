@@ -1,5 +1,6 @@
 **Inversion of Control** - создание и управление объектами
-**Dependency Injection **- внедрение зависимостей
+
+**Dependency Injection**- внедрение зависимостей
 
 - В IntelliJIDEA создать Maven  проект можно через архетип maven-quickstart.
 Затем добавить зависимость Spring context в POM файл.
@@ -22,7 +23,7 @@ Class  var = context.getBean("beanname",Class.class);
 var.sound();
 ```
 ***Внедрение зависимостей может проводится с помощью:***
-- ** Конструктора**
+- **Конструктора**
 ```
    <!--Create bean pet-->
     <bean id = "pet"
