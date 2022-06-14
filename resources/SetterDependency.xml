@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+    <!--Create bean pet-->
+    <bean id = "pet"
+          class  = "org.dohuacode.spring.configuration.xmlconfig.Cat">
+
+    </bean>
+    <!--Create bean person with dependency via setter  nameconstruct : setPet to pet via delete "Set"-->
+    <bean id = "person"
+          class  = "org.dohuacode.spring.configuration.xmlconfig.PersonSetter">
+        <property name = "pet" ref = "pet"/>
+        <!--set field value via getter-->
+        <property name="name" value="debilov"/>
+
+    </bean>
+
+</beans>
+
+
+
